@@ -2,6 +2,7 @@ const int ledPin =  13; // LED pin
 const int diff = 10;    // Variation to detect
 const int samples = 50; // how many readings to take
 int prevValue = 0;
+
 void setup() {
   Serial.begin(9600);
   pinMode(ledPin, OUTPUT);

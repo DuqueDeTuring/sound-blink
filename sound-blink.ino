@@ -1,6 +1,6 @@
 const int ledPin =  13; // LED pin
-const int diff = 10;    // Variation to detect
-const int samples = 50; // how many readings to take
+const int diff = 20;    // Variation to detect
+const int samples = 70; // how many readings to take
 int prevValue = 0;
 
 void setup() {
@@ -20,12 +20,12 @@ void loop() {
   sum = sum / samples;  // average
   if (abs(sum - prevValue) > diff) {
     digitalWrite(ledPin, HIGH);
-    delay(10);
+    delay(5);
   } else {
     digitalWrite(ledPin, LOW);
   }
 
-  //    Serial.println(sum);
+      Serial.println(sum);
   prevValue = sum;
 
 }
